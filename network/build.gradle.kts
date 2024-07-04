@@ -17,10 +17,18 @@ dependencies {
     api(libs.kotlinx.datetime)
 
     api(libs.ktor.server.core)
-    api(libs.ktor)
+    api(libs.ktor.server.netty)
 
     api(libs.kotlinx.coroutines.core)
     api(libs.kotlinx.coroutines.android)
 
+
+    testImplementation(libs.kotlinx.coroutines.test)
+    testImplementation(libs.ktor.client.core)
+    testImplementation(libs.ktor.client.cio)
+    testImplementation(libs.ktor.server.core)
+    testImplementation(libs.ktor.server.netty)
+
     testImplementation(libs.junit)
+    androidTestImplementation(libs.androidx.junit)
 }

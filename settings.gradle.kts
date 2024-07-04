@@ -28,3 +28,5 @@ include(":app-server")
 include(":app-client")
 include(":design-system")
 include(":network")
+include(":datastore")
+

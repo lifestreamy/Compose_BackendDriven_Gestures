@@ -3,6 +3,7 @@ plugins {
     alias(libs.plugins.convention.android.compose)
     alias(libs.plugins.convention.android.hilt)
     alias(libs.plugins.room)
+    alias(libs.plugins.kotlin.serialization)
 }
 
 android {
@@ -29,7 +30,7 @@ android {
             applicationIdSuffix = ".debug"
         }
         release {
-            isMinifyEnabled = true
+            isMinifyEnabled = false
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
@@ -42,6 +43,7 @@ android {
 dependencies {
     implementation(projects.designSystem)
     implementation(projects.network)
+    implementation(projects.datastore)
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
@@ -50,8 +52,14 @@ dependencies {
     implementation(libs.androidx.lifecycle.runtimeCompose)
     implementation(libs.androidx.lifecycle.viewModelCompose)
 
+    implementation(libs.androidx.room.ktx)
+    implementation(libs.androidx.room.runtime)
+    ksp(libs.androidx.room.compiler)
+
     implementation(libs.androidx.dataStore.core)
     implementation(libs.androidx.dataStore.preferences)
+
+    implementation(libs.kotlinx.serialization.json)
 
     testImplementation(libs.junit)
 

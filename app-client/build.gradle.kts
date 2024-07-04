@@ -21,7 +21,7 @@ android {
             applicationIdSuffix = ".debug"
         }
         release {
-            isMinifyEnabled = true
+            isMinifyEnabled = false
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
@@ -33,6 +33,9 @@ android {
 dependencies {
     implementation(projects.designSystem)
     implementation(projects.network)
+    implementation(projects.datastore)
+
+
 
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.appcompat)
