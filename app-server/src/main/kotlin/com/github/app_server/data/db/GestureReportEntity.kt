@@ -3,7 +3,7 @@ package com.github.app_server.data.db
 import androidx.room.Entity
 import androidx.room.TypeConverters
 import com.github.app_server.data.db.type_converters.InstantConverter
-import com.github.network.domain.model.GestureReport
+import com.github.network.model.GestureReport
 import kotlinx.datetime.Instant
 
 @Entity(

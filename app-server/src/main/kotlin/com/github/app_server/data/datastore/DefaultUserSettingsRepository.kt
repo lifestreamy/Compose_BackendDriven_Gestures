@@ -1,9 +1,8 @@
-package com.github.app_client.data
+package com.github.app_server.data.datastore
 
-import com.github.app_client.data.datastore.DefaultDataStore
-import com.github.app_client.data.datastore.DefaultDataStoreSavedObject
-import com.github.app_client.domain.datastore.UserSettingsRepository
-import com.github.app_client.domain.datastore.model.ClientUserSettings
+
+import com.github.app_server.domain.datastore.UserSettingsRepository
+import com.github.app_server.domain.datastore.model.ServerUserSettings
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.first
 import javax.inject.Inject
@@ -11,13 +10,13 @@ import javax.inject.Inject
 class DefaultUserSettingsRepository @Inject constructor(private val dataStore: DefaultDataStore) :
     UserSettingsRepository {
 
-    override val settingsFlow: Flow<ClientUserSettings> = dataStore.savedPreferencesFlow
+    override val settingsFlow: Flow<ServerUserSettings> = dataStore.savedPreferencesFlow
 
 
-    override suspend fun setSettings(newSettings: ClientUserSettings) =
+    override suspend fun setSettings(newSettings: ServerUserSettings) =
         dataStore.replaceAllSavedPreferences(newSettings)
 
-    override suspend fun getSettings(): ClientUserSettings = settingsFlow.first()
+    override suspend fun getSettings(): ServerUserSettings = settingsFlow.first()
 
     override suspend fun resetSettings() = dataStore.clear()
 

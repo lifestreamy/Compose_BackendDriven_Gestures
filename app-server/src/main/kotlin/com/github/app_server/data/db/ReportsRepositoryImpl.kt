@@ -1,7 +1,7 @@
 package com.github.app_server.data.db
 
 import com.github.app_server.domain.db.ReportsRepository
-import com.github.network.domain.model.GestureReport
+import com.github.network.model.GestureReport
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.distinctUntilChanged
 import kotlinx.coroutines.flow.mapLatest

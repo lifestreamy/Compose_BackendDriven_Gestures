@@ -4,10 +4,10 @@
     <selectionStates>
       <SelectionState runConfigName="app-server">
         <option name="selectionMode" value="DROPDOWN" />
-        <DropdownSelection timestamp="2024-06-27T19:57:02.724983300Z">
+        <DropdownSelection timestamp="2024-07-04T23:35:37.072212Z">
           <Target type="DEFAULT_BOOT">
             <handle>
-              <DeviceId pluginId="LocalEmulator" identifier="path=D:\AndroidAVDHome\Medium_Phone_API_34.avd" />
+              <DeviceId pluginId="LocalEmulator" identifier="path=D:\AndroidAVDHome\New_Device_1_API_30.avd" />
             </handle>
           </Target>
         </DropdownSelection>
@@ -15,10 +15,10 @@
       </SelectionState>
       <SelectionState runConfigName="app-client">
         <option name="selectionMode" value="DROPDOWN" />
-        <DropdownSelection timestamp="2024-07-04T23:14:36.223905Z">
+        <DropdownSelection timestamp="2024-07-04T23:35:26.665181700Z">
           <Target type="DEFAULT_BOOT">
             <handle>
-              <DeviceId pluginId="LocalEmulator" identifier="path=D:\AndroidAVDHome\Medium_Phone_API_33.avd" />
+              <DeviceId pluginId="LocalEmulator" identifier="path=D:\AndroidAVDHome\New_Device_1_API_30.avd" />
             </handle>
           </Target>
         </DropdownSelection>

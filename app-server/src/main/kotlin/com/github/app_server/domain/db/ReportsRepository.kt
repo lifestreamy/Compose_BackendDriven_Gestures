@@ -1,6 +1,6 @@
 package com.github.app_server.domain.db
 
-import com.github.network.domain.model.GestureReport
+import com.github.network.model.GestureReport
 import kotlinx.coroutines.flow.Flow
 
 interface ReportsRepository {

@@ -1,17 +1,16 @@
-package com.github.app_client.data.datastore
+package com.github.app_client.data.datastore.di
 
 import android.content.Context
-import com.github.app_client.data.DefaultUserSettingsRepository
+import com.github.app_client.data.datastore.DefaultUserSettingsRepository
+import com.github.app_client.data.datastore.DefaultDataStore
 import com.github.app_client.di.ApplicationScope
 import com.github.app_client.domain.datastore.UserSettingsRepository
-import com.github.datastore.CustomPreferencesDataStore
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.android.qualifiers.ApplicationContext
 import dagger.hilt.components.SingletonComponent
 import kotlinx.coroutines.CoroutineScope
-import javax.inject.Qualifier
 import javax.inject.Singleton
 
 @Module
@@ -30,6 +29,5 @@ internal object DataStoreModule {
     @Singleton
     fun provideUserSettingsRepository(ds: DefaultDataStore)
     : UserSettingsRepository = DefaultUserSettingsRepository(ds)
-
 
 }

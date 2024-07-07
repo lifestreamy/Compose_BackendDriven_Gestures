@@ -1,4 +1,4 @@
-package com.github.app_server.di
+package com.github.app_server.data.db.di
 
 import com.github.app_server.data.db.ReportsRepositoryImpl
 import com.github.app_server.domain.db.ReportsRepository

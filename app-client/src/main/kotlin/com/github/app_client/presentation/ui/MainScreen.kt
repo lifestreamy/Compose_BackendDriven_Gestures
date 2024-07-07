@@ -1,6 +1,8 @@
 package com.github.app_client.presentation.ui
 
+import androidx.compose.foundation.gestures.*
 import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.rememberScrollState
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.rounded.Settings
 import androidx.compose.material3.*
@@ -45,8 +47,15 @@ private fun MainScreen(
         modifier = Modifier.fillMaxSize(),
         contentWindowInsets = WindowInsets.safeDrawing
     ) { innerPadding ->
+        val scrollState = rememberScrollState()
         Column(
-            modifier = modifier.padding(innerPadding),
+            modifier = modifier
+                .padding(innerPadding)
+                .scrollable(
+                    scrollState,
+                    orientation = Orientation.Vertical,
+                    flingBehavior = ScrollableDefaults.flingBehavior()
+                ),
             horizontalAlignment = Alignment.CenterHorizontally,
             verticalArrangement = Arrangement.spacedBy(
                 5.dp,
@@ -67,6 +76,7 @@ private fun MainScreen(
                 )
             }
             HorizontalDivider()
+
         }
     }
 }

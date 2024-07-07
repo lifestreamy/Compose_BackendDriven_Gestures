@@ -10,7 +10,7 @@ import org.junit.Test
 /**
  * See [testing documentation](http://d.android.com/tools/testing).
  */
-class KtorClientUnitTests {
+class KtorClientHttpTest {
 
     private companion object {
         const val BASE_URL = "https://httpbin.org"
@@ -26,5 +26,7 @@ class KtorClientUnitTests {
             println("testKtorClientSimpleGetRequest: $data")
         }
     }
+
+
 
 }

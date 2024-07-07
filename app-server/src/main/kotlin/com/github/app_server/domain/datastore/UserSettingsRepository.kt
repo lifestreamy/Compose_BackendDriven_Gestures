@@ -11,4 +11,10 @@ interface UserSettingsRepository {
 
     suspend fun getSettings() : ServerUserSettings
 
+    suspend fun setServerIp(ip : String)
+
+    suspend fun setServerPort(port : Int)
+
+    suspend fun resetSettings()
+
 }

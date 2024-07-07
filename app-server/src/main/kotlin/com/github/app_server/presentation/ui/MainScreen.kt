@@ -78,10 +78,10 @@ private fun MainScreenPrev1() {
     CommonAppTheme {
         MainScreen(
             serverState = ServerState(
-                isTaskRunning = false,
+                isActive = false,
                 savedSettings = ServerUserSettings(
-                    clientIp = null,
-                    clientPort = null
+                    serverIP = null,
+                    serverPort = null
                 )
             ),
             onSettingsClick = { -> },
@@ -99,10 +99,10 @@ private fun MainScreenPrev2() {
     CommonAppTheme {
         MainScreen(
             serverState = ServerState(
-                isTaskRunning = false,
+                isActive = false,
                 savedSettings = ServerUserSettings(
-                    clientIp = null,
-                    clientPort = null
+                    serverIP = null,
+                    serverPort = null
                 )
             ),
             onSettingsClick = { -> },
